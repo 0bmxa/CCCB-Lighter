@@ -21,13 +21,32 @@ class ViewController: NSViewController {
         self.allLampsSlider?.minValue = 150
         self.allLampsSlider?.maxValue = 255
         self.updateUI()
+        
+        // Workaround to get key events in here
+        NSEvent.addLocalMonitorForEvents(matching: .keyUp) { event -> NSEvent? in
+            self.keyUp(with: event)
+            return event
+        }
     }
 
-    @IBAction func allLampsSliderChanged(_ sender: NSSlider) {
-        let sliderValue = sender.integerValue
+    @IBAction func allLampsSliderChanged(_ sender: NSSlider?) {
+        guard let sliderValue = self.allLampsSlider?.integerValue else { return }
         self.lampValueChanged(value: sliderValue)
     }
+    
+    override func keyUp(with event: NSEvent) {
+        guard let keyChars = event.characters else { return }
+        if keyChars.contains("-") {
+            self.allLampsSlider?.integerValue -= 10
+        } else if keyChars.contains("+") || keyChars.contains("=") {
+            self.allLampsSlider?.integerValue += 10
+        }
+        
+        self.allLampsSliderChanged(nil)
+    }
 
+    
+    
 }
 
 private extension ViewController {
