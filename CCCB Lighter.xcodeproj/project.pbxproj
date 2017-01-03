@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EEBDCA441E1B4F1600DC9EB1 /* DaliConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDCA431E1B4F1600DC9EB1 /* DaliConnector.swift */; };
+		EEBDCA461E1B4F2600DC9EB1 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDCA451E1B4F2600DC9EB1 /* HTTPRequest.swift */; };
 		EEEC95801E1B418F0053618F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEC957F1E1B418F0053618F /* AppDelegate.swift */; };
 		EEEC95821E1B418F0053618F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEC95811E1B418F0053618F /* ViewController.swift */; };
 		EEEC95841E1B418F0053618F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEEC95831E1B418F0053618F /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EEBDCA431E1B4F1600DC9EB1 /* DaliConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaliConnector.swift; sourceTree = "<group>"; };
+		EEBDCA451E1B4F2600DC9EB1 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		EEEC957C1E1B418F0053618F /* CCCB Lighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CCCB Lighter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEEC957F1E1B418F0053618F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEEC95811E1B418F0053618F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				EEEC957F1E1B418F0053618F /* AppDelegate.swift */,
 				EEEC958E1E1B41B20053618F /* WindowController.swift */,
 				EEEC95811E1B418F0053618F /* ViewController.swift */,
+				EEBDCA431E1B4F1600DC9EB1 /* DaliConnector.swift */,
+				EEBDCA451E1B4F2600DC9EB1 /* HTTPRequest.swift */,
 				EEEC95831E1B418F0053618F /* Assets.xcassets */,
 				EEEC95851E1B418F0053618F /* Main.storyboard */,
 				EEEC95881E1B418F0053618F /* Info.plist */,
@@ -138,7 +144,9 @@
 			files = (
 				EEEC95821E1B418F0053618F /* ViewController.swift in Sources */,
 				EEEC95801E1B418F0053618F /* AppDelegate.swift in Sources */,
+				EEBDCA461E1B4F2600DC9EB1 /* HTTPRequest.swift in Sources */,
 				EEEC958F1E1B41B20053618F /* WindowController.swift in Sources */,
+				EEBDCA441E1B4F1600DC9EB1 /* DaliConnector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
