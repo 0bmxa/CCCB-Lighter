@@ -2,9 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaDFRPlugin" version="7104"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="the Touch Bar" message="Use a version of macOS with Touch Bar support." minToolsVersion="8.1" minSystemVersion="10.12.1" requiredIntegratedClassName="NSTouchBar"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -669,7 +671,7 @@
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="300"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
                         <value key="minSize" type="size" width="160" height="300"/>
                         <value key="maxSize" type="size" width="480" height="300"/>
                     </window>
@@ -732,9 +734,32 @@
                             <constraint firstItem="kOA-nf-onr" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="J2W-uz-rQx"/>
                         </constraints>
                     </view>
+                    <touchBar key="touchBar" id="KHh-bH-V7T">
+                        <touchBarItems>
+                            <sliderTouchBarItem label="CCCB" id="eNK-xU-r7g">
+                                <sliderAccessory key="minimumValueAccessory" id="ZbJ-3c-OaL">
+                                    <sliderAccessoryBehavior key="behavior" id="GzB-ep-aU5"/>
+                                </sliderAccessory>
+                                <sliderAccessory key="maximumValueAccessory" id="iWl-on-TvW">
+                                    <sliderAccessoryBehavior key="behavior" id="PE4-MW-aAh"/>
+                                </sliderAccessory>
+                                <slider key="slider" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ixC-Xb-Yea">
+                                    <rect key="frame" x="50.5" y="0.0" width="634.5" height="30"/>
+                                    <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="KdA-De-FH0"/>
+                                    <connections>
+                                        <action selector="touchBarAllLampsSliderChanged:" target="XfG-lQ-9wD" id="7L8-i0-eGz"/>
+                                    </connections>
+                                </slider>
+                                <connections>
+                                    <action selector="touchBarAllLampsSliderChanged:" target="XfG-lQ-9wD" id="HDv-G0-WVi"/>
+                                </connections>
+                            </sliderTouchBarItem>
+                        </touchBarItems>
+                    </touchBar>
                     <connections>
                         <outlet property="allLampsSlider" destination="kI3-r8-XEq" id="dwo-d9-BeT"/>
                         <outlet property="allLampsValueLabel" destination="Cel-ol-zF6" id="WtU-Md-J39"/>
+                        <outlet property="touchBarAllLampsSlider" destination="ixC-Xb-Yea" id="ncb-9D-P6z"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
